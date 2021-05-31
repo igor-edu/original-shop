@@ -1,0 +1,45 @@
+@import '../basics.scss';
+
+footer {
+  background-image: linear-gradient(90deg, #309292, #6c8686);
+  padding: 1rem 0 ;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  height: 12vh;
+  min-height: 11.6rem;
+
+  @include desktops {
+    height: 10vh;
+    min-height: 9.7rem;
+  }
+
+  .footer-brand {
+    font-size: 3rem;
+    color: darken($color: #8f7ce4, $amount: 20);
+    font-style: italic;
+    font-weight: 600;
+    padding: .3rem;
+    border-radius: .2rem;
+    margin-bottom: .5rem;
+  }
+
+  .footer-content {
+    .footer-content-first,
+    .footer-content-second {
+      @include desktops {
+        display: inline-block;
+        margin-right: 2rem;
+      }
+    }
+
+    .footer-content-first {
+      margin-bottom: .6rem;
+    }
+
+    span.footer-design {
+      font-style: italic;
+      letter-spacing: 0.2px;
+    }
+  }
+}

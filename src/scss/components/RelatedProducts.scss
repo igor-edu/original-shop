@@ -1,0 +1,25 @@
+@import '../basics.scss';
+
+.related-products {
+  margin-bottom: 4rem;
+
+  h2 {
+    margin: 0 0 5rem;
+    text-align: center;
+    font-size: 4rem;
+
+    span {
+      border-bottom: 2px solid #8f7ce4;
+    }
+  }
+
+  .products-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include large {
+      justify-content: space-around;
+    }
+  }
+}

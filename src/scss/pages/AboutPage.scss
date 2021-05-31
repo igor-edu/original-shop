@@ -1,0 +1,185 @@
+@import '../basics.scss';
+
+.about-page {
+  .about {
+    margin: 4rem 0 6rem;
+
+    @include large {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 3.4rem;
+      line-height: 3.8rem;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      span {
+        border-bottom: 2px solid #8f7ce4;
+      }
+    }
+
+    p {
+      color: #919197;
+      font-size: 1.7rem;
+      line-height: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: #8f7ce4;
+      color: #fff;
+      padding: .8rem 1rem;
+      border: none;
+      font-size: 1.4rem;
+      border-radius: 2px;
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: lighten($color: #8f7ce4, $amount: 4);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .map-wrapper {
+    width: 60rem;
+    max-width: 100%;
+    height: 40rem;
+    overflow: hidden;
+    margin: 4rem auto 0;
+
+    iframe {
+      margin: 0 auto;
+    }
+  }
+
+  .vertical-spacer {
+    width: 2px;
+    height: 10rem;
+    margin: 4rem auto 2rem;
+    background-color: #8f7ce4;
+  }
+
+  .our-stores {
+    margin-bottom: 2rem;
+
+    h2 {
+      margin: 3rem 0 2.2rem;
+      font-size: 3rem;
+      text-align: center;
+
+      span {
+        border-bottom: 2px solid #8f7ce4;
+      }
+    }
+
+    .stores {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include phones {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      @include large {
+        justify-content: space-around;
+      }
+
+      .store {
+        margin-bottom: .6rem;
+
+        h3 {
+          font-size: 2.2rem;
+        }
+
+        p {
+          font-size: 1.7rem;
+          color: #919197;
+        }
+      }
+    }
+  }
+
+  .write-to-us {
+    margin: 4rem 0;
+    
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 3rem;
+      text-align: center;
+
+      span {
+        border-bottom: 2px solid #8f7ce4;
+      }
+    }
+
+    form {
+      width: 60rem;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 3rem auto;
+      justify-content: center;
+
+      @include tablets {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .input-wrapper {
+        width: 29rem;
+        max-width: 100%;
+        height: 4rem;
+        margin-bottom: 2rem;
+
+        input {
+          width: 100%;
+          height: 100%;
+          padding: 0 .5rem;
+        }
+      }
+
+      .textarea-wrapper {
+        max-width: 100%;
+        width: 29rem;
+
+        @include tablets {
+          width: 100%;
+        }
+
+        textarea {
+          width: 100%;
+          padding: .5rem;
+        }
+      }
+
+      button {
+        background-color: #8f7ce4;
+        color: #fff;
+        padding: .8rem 1rem;
+        border: none;
+        font-size: 1.4rem;
+        border-radius: 2px;
+        margin-top: 1rem;
+
+        @include phones {
+          margin-top: 1.4rem;
+        }
+
+        @include large {
+          margin: 1.4rem auto;
+        }
+  
+        &:hover {
+          background-color: lighten($color: #8f7ce4, $amount: 4);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

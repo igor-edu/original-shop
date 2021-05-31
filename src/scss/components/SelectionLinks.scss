@@ -1,0 +1,28 @@
+@import '../basics.scss';
+
+.selection-links {
+  margin: 5rem 0;
+  text-align: center;
+
+  .links-container {
+    margin-top: 1rem;
+
+    a {
+      padding: 4px 2px;
+      margin: 0 5px;
+      color: #7c7c7c;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @include tablets {
+        padding: 4px 10px;
+      }
+
+      &:hover {
+        background-color: #8f7ce4;
+        color: #fff;
+        border-radius: 2px;
+      }
+    }
+  }
+}

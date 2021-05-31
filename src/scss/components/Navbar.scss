@@ -1,0 +1,164 @@
+@import '../basics.scss';
+
+.nav {
+  background-color: #deeeee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+
+  .container {
+    @include flexcenter;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem 0;
+
+    @include desktops {
+      flex-direction: row;
+    }
+
+    .nav-brand {
+      font-size: 3rem;
+      position: relative;
+      bottom: 0.3rem;
+      color: $color-lila;
+      font-style: italic;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      margin: 5px 0;
+
+      @include desktops {
+        position: relative;
+        left: 2.5rem;
+      }
+
+      @include large {
+        left: 6rem;
+      }
+
+      ul {
+        @include flexcenter;
+        justify-content: space-around;
+        list-style: none;
+
+        li:not(:last-child) {
+          @include phones {
+            margin-right: 5rem;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          color: #000;
+          border-radius: 0.3rem;
+          text-transform: capitalize;
+          font-size: 1.8rem;
+          letter-spacing: 0.4px;
+
+          &:hover {
+            background-color: $color-lila;
+            color: #fff; 
+          }
+        }
+      }
+    }
+
+    .nav-cart {
+      @include flexcenter;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      position: relative;
+      left: -5.7rem;
+
+      @include phones {
+        left: -6.9rem;
+      }
+
+      @include desktops {
+        left: 6rem;
+      }
+
+      @include large {
+        left: 11rem;
+      }
+
+      &:hover {
+        background-color: darken($color: $color-green-pale, $amount: 12);
+      }
+
+      &:active {
+        color: black;
+      }
+
+      &-icon {
+        margin-right: .5rem;
+        color: $color-lila;
+        position: relative;
+        top: 1px;
+      }
+
+      &-title {
+        margin-right: .5rem;
+      }
+
+      &-counter {
+        background-color: $color-lila;
+        padding: 0 .5rem;
+        border-radius: 50%;
+        color: #fff;
+      }
+    }
+
+    .nav-wishlist {
+      @include flexcenter;
+      text-decoration: none;
+      padding: .5rem 1rem;
+      border-radius: .3rem;
+      position: relative;
+      top: -2.9rem;
+      left: 4.8rem;
+      margin-bottom: -2.5rem;
+
+      @include phones {
+        left: 5.5rem;
+      }
+
+      @include desktops {
+        top: 0;
+        left: 0;
+        margin-bottom: 0;
+      }
+      
+      &:hover {
+        background-color: darken($color: $color-green-pale, $amount: 12);
+      }
+
+      &:active {
+        color: black;
+      }
+
+      &-icon {
+        margin-right: .5rem;
+        position: relative;
+        top: .3rem;
+        color: $color-lila;
+      }
+
+      &-title {
+        margin-right: .5rem;
+      }
+
+      &-counter {
+        background-color: $color-lila;
+        padding: 0 .5rem;
+        border-radius: 50%;
+        color: #fff;
+      }
+    }
+  }
+}

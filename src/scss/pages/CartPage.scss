@@ -1,0 +1,141 @@
+@import '../basics.scss';
+
+.cart {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+
+  .price {
+    text-align: right;
+  }
+
+  .individual-product-cart {
+    &:last-of-type {
+      border-bottom: 1px solid grey;
+    }
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    border-top: 1px solid grey;
+
+    @include tablets {
+      flex-direction: row;
+    }
+
+    .image-wrapper {
+      width: 10rem;
+      height: 7rem;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .content-wrapper {
+      flex-grow: 1;
+
+      @include tablets {
+        padding-left: 1rem;
+      }
+
+      .product-name {
+        font-size: 2.2rem;
+
+        @include tablets {
+          margin-top: -4px;
+        }
+      }
+
+      .product-price {
+        margin: 4px 0 6px;
+        display: flex;
+
+        @include tablets {
+          margin: 0 0 1px;
+        }
+
+        .product-quantity {
+          margin: 0 1rem;
+        }
+
+        .product-price-span {
+          display: inline-block;
+          width: 6rem;
+          margin: 0 3.5 0 .5rem;
+
+          @include phones {
+            margin-right: 16rem;
+          }
+
+          @include tablets {
+            margin-right: 28rem;
+          }
+
+          @include desktops {
+            margin-right: 40rem;
+          }
+
+          @include large {
+            margin-right: 50rem;
+          }
+        }
+
+        .item-total {
+          display: inline-block;
+          margin-left: auto;
+        }
+
+        .decrease,
+        .increase {
+          width: 2rem;
+          height: 2rem;
+          background-color: #8f7ce4;
+          color: #fff;
+          font-size: 1.6rem;
+          border: none;
+
+          &:hover {
+            cursor: pointer;
+            background-color: lighten($color: #8f7ce4, $amount: 6);
+          }
+        }
+      }
+
+      .remove-from-basket,
+      .move-to-wishlist {
+        margin-right: 1rem;
+        background-color: #8f7ce4;
+        color: #fff;
+        padding: .6rem 1rem;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+          background-color: lighten($color: #8f7ce4, $amount: 4);
+        }
+      }
+
+      .move-to-wishlist {
+        margin: .6rem 0 0;
+        display: block;
+        width: 13.8rem;
+
+        @include tablets {
+          display: inline-block;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .subtotal {
+    text-align: right;
+    padding-top: 5px;
+
+    &-price {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@import '../basics.scss';
+
+.products-individual-page {
+  margin-top: 10rem;
+
+  .product-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .image-wrapper {
+      flex-basis: 48%;
+      flex-grow: 0;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .product-details {
+      flex-basis: 48%;
+      flex-grow: 0;
+      flex-shrink: 0;
+
+      @include tablets { 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      h2 {
+        margin-top: 1rem;
+
+        @include tablets {
+          margin-top: 0px;
+        }
+      }
+
+      p {
+        @include tablets {
+          position: relative;
+          top: -0.5rem;
+        }
+      }
+
+      .product-price {
+        @include desktops {
+          top: -1.5rem;
+        }
+
+        @include large {
+          top: -2.5rem;
+        }
+      }
+
+      h3 {
+        margin-top: 1.4rem;
+
+        @include tablets {
+          margin-top: 0px;
+        }
+
+        @include desktops {
+          position: relative;
+          top: 1rem;
+        }
+
+        @include large {
+          top: 2rem;
+        }
+
+        &:nth-of-type(2) {
+          @include tablets {
+            position: relative;
+            top: .5rem;
+          }
+
+          @include desktops {
+            top: 1.5rem;
+          }
+
+          @include large {
+            top: 2.5rem;
+          }
+        }
+      }
+
+      .product-shipping-info {
+        display: flex;
+        margin-top: 3px;
+        flex-wrap: wrap;
+
+        .width,
+        .height,
+        .length,
+        .weight {
+          flex-basis: 6.8rem;
+          flex-shrink: 0;
+          flex-grow: 0;
+          height: 5rem;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          border: 1px solid grey;
+
+          @include tablets {
+            padding-top: 6px;
+          }
+          
+          &:not(:first-child) {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0 6rem 0;
+
+    @include phones {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: .6rem 1rem .8rem;
+      background-color: #8f7ce4;
+      color: #fff;
+      border-radius: 2px;
+      text-decoration: none;
+      border: none;
+      width: 15rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: lighten($color: #8f7ce4, $amount: 8);
+        color: #000;
+      }
+    }
+  }
+}
